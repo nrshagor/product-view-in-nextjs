@@ -19,9 +19,16 @@ function Page({ params }) {
       console.error("Error fetching data:", error);
     }
   };
+  console.log(data);
   return (
     <div>
-      <h1>Product Details {data.id}</h1>
+      <img src={data.pictures} alt={data.title} className="product-image" />
+      <div className="product-info">
+        <p className="product-title">Title: {data.title}</p>
+        <p className="product-text">Price: {data.price}</p>
+        <p className="product-text">Status: {data.status}</p>
+        <p className="product-text">Target Price 1: {data.targetPrice1}</p>
+      </div>
     </div>
   );
 }

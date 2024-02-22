@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
-import "../style/productdata.css";
+import "../style/productdata.scss";
 
 function Page() {
   const [data, setData] = useState([]);
@@ -23,20 +23,29 @@ function Page() {
   };
 
   return (
-    <div className="api-container">
-      <h1>API Data</h1>
-      <div className="api-list">
+    <div className="product-container">
+      <h1> Showing All Product </h1>
+      <div className="product-list">
         {data.map((item) => (
-          <div className="api-item" key={item.id}>
-            <img src={item.pictures} alt={item.title} className="api-image" />
-            <div>
-              <p className="api-title">Title: {item.title}</p>
-              <p className="api-text">Price: {item.price}</p>
-              <p className="api-text">Status: {item.status}</p>
-              <p className="api-text">Target Price 1: {item.targetPrice1}</p>
-              <Link href={`/ProductsData/${item.id}`} passHref>
-                {" "}
-                see
+          <div className="product-item" key={item.id}>
+            <img
+              src={item.pictures}
+              alt={item.title}
+              className="product-image"
+            />
+            <div className="product-info">
+              <p className="product-title">Title: {item.title}</p>
+              <p className="product-text">Price: {item.price}</p>
+              <p className="product-text">Status: {item.status}</p>
+              <p className="product-text">
+                Target Price 1: {item.targetPrice1}
+              </p>
+              <Link
+                href={`/ProductsData/${item.id}`}
+                passHref
+                className="detailsbtn"
+              >
+                View Details
               </Link>
             </div>
           </div>
