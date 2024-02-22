@@ -1,0 +1,45 @@
+/* styles.css (or any other CSS file in your project) */
+
+/* Container styles */
+.api-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* List styles */
+.api-list {
+  list-style-type: none;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* List item styles */
+.api-item {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Image styles */
+.api-image {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* Title styles */
+.api-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Other text styles */
+.api-text {
+  margin-bottom: 5px;
+}
